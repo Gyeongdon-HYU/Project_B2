@@ -44,7 +44,6 @@ def fitSpec(directory, index):
     y_values_new = v[6][1] - y_values
 
     plt.subplot(2, 3, 3)
-    plt.legend(handles=model.handle[index][0], ncol=2, loc="lower center")
     plt.title("REF fitting")
     plt.xlabel('Wavelength [nm]')
     plt.ylabel('Measured transmission [dB]')
@@ -66,3 +65,4 @@ def fitSpec(directory, index):
     plt.title("Fitted Spectrum", fontsize=12)
     plt.xlabel('Wavelength [nm]', fontsize=12)
     plt.ylabel('Measured transmission [dB]', fontsize=12)
+    plt.legend(handles=model.handle[index][0], ncol=2, loc="lower center")

@@ -40,6 +40,7 @@ def specFitting(directory, index):
     plt.title("Fitted ref. spec", fontsize=12)
     plt.xlabel('Wavelength [nm]', fontsize=12)
     plt.ylabel('Measured transmission [dB]', fontsize=12)
+    plt.legend(ncol=2, loc="lower center")
 
     handle.append(l)
     r_fitting = r2_score(y, y2)

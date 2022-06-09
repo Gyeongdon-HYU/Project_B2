@@ -56,10 +56,10 @@ def showPara(directory):
 
 
     plt.subplot(2, 3, 4)
-    plt.plot(polyline, np.abs(model1(polyline)), color='red')
+    plt.plot(polyline, np.abs(model1(polyline)), color='red', label="fitted graph")
     plt.scatter(v[0], np.abs(v[1]), s=50, c='red', lw=2, label="IV data")
     if flag == False:
-        plt.plot(v[0][9:11], np.abs(v[1][9:11]), c='red', lw=2, label="fitted graph")
+        plt.plot(v[0][9:11], np.abs(v[1][9:11]), c='red', lw=2, label=R2)
         plt.plot(V2, fittedDiagram, c='red', lw=2)
     plt.title("IV-Analysis", size=12)
     plt.xlabel('Voltage [V]', size=12)
@@ -68,4 +68,4 @@ def showPara(directory):
         plt.yscale('logit')
     plt.legend()
     plt.grid(True)
-    plt.suptitle('[Graph about analyzed data]', fontsize=20)
+    plt.suptitle('[Graph of analyzed data]', fontsize=20)
